@@ -5,18 +5,14 @@
  */
 var findKthLargest = function(nums, k) {
     let heapSize = nums.length;
-
-    // Helper function to swap two elements in the array.
     function swap(i, j) {
         const temp = nums[i];
         nums[i] = nums[j];
         nums[j] = temp;
     }
-
-    // Heapify function to maintain the max-heap property at index i.
     function heapify(i, heapSize) {
         let largest = i;
-        const left = 2 * i + 1;
+        const left = 2 * i + 1
         const right = 2 * i + 2;
 
         if (left < heapSize && nums[left] > nums[largest]) {
@@ -48,5 +44,4 @@ var findKthLargest = function(nums, k) {
     return nums[0];
 };
 
-findKthLargest([3,2,3,1,2,4,5,5,6]
-,4)
+findKthLargest([3,2,3,1,2,4,5,5,6],4)

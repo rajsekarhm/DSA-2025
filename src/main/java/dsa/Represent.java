@@ -1,5 +1,6 @@
 package dsa;
 
+import java.util.Arrays;
 public class Represent {
     public  static void  main(String[] args){
         Graph g = new Graph(6);
@@ -11,8 +12,8 @@ public class Represent {
         g.addEdge(3, 4, 2);
         g.addEdge(5,4,2);
         g.addEdge(5,1,1);
-//        g.printGraph();
-        g.dfs(3);
+        g.dfs(0);
     }
+
 
 }
