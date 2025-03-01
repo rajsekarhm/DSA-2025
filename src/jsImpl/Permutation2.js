@@ -1,8 +1,8 @@
 var permute = function(nums) {
   var resultList = [];
-  nums.sort((a, b) => a - b); 
-  permutationCalculate(resultList, [], nums, new Array(nums.length).fill(false));
-  return removeDuplicates(resultList).map((ele) => JSON.parse(ele))
+  // nums.sort((a, b) => a - b); 
+  
+  return permutationCalculate(resultList, [], nums, new Array(nums.length).fill(false));
 };
 
 
@@ -35,6 +35,8 @@ function removeDuplicates(arr) {
   }
   return [...uniqueSet]
 }
+
+
 console.log(permute([-1,1,2]))
 
 

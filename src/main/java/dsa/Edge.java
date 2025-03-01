@@ -1,10 +1,13 @@
 package dsa;
 
 public class Edge {
-    int to;
-    int weight;
-    Edge(int _to,int _weight){
-        this.to = _to;
-        this.weight = _weight;
+    int point;
+    int distance;
+    int stops;
+    Edge(int _to,int _weight, int stops){
+        this.point = _to;
+        this.distance = _weight;
+        this.stops = stops;
+
     }
 }
