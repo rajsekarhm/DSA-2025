@@ -41,14 +41,17 @@ public class CheapFlight {
             int u = cur.point;
             int d = cur.distance;
             int s = cur.stops;
-            if (d > dist.get(u)) continue;
+//            if (d > dist.get(u)) continue;
 
             for(int i =0 ;i < grp.adjList.get(u).size();i++){
                 Edge val = grp.adjList.get(u).get(i);
                 int ans =  val.distance;
-                System.out.println(u+ " " + ans+dist.get(u) + " " + dist.get(val.point));
-                if(dist.get(u) + ans < dist.get(val.point) && s < k+1){
+                System.out.println(ans);
+                System.out.println(val.point);
+                System.out.println( s<= k);
+                if(dist.get(u) + ans < dist.get(val.point)  && s <= k + 1){
                     dist.set(val.point, dist.get(u) + ans);
+                    stops.set(val.point, s + 1);
                     queue.add(new Edge(val.point, dist.get(val.point),s+1));
                 }
             }

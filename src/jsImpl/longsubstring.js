@@ -9,8 +9,11 @@ var lengthOfLongestSubstring = function(s) {
             left++;
         }
         track.add(s[right]);
+        console.log(longestValue, right - left + 1)
         longestValue = Math.max(longestValue, right - left + 1);
     }
     
     return longestValue;
 };
+
+console.log(lengthOfLongestSubstring("pwwkew"))
